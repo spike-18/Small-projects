@@ -34,7 +34,7 @@ struct CyclicReductionSolver {
             max_levels++;
         }
         
-        // Allocate Base Case (size 1)
+        // Allocate base case (size 1)
         sizes.push_back(current_size);
         a_levels.push_back(new double[current_size]);
         b_levels.push_back(new double[current_size]);

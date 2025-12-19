@@ -4,17 +4,17 @@
 RESULTS_FILE="benchmark_results.csv"
 
 # --- Argument Parsing ---
-if [ "$#" -lt 5 ]; then
+if [ "$#" -lt 3 ]; then
     echo "Usage: $0 <b_value> <start_N> <end_N> [step_N]"
     exit 1
 fi
 
 BIN1="bin/main_base"
 BIN2="bin/main_omp"
-B_VAL="$3"
-START_N="$4"
-END_N="$5"
-STEP_N="${6:-100}" # Default step is 100 if not provided
+B_VAL="$1"
+START_N="$2"
+END_N="$3"
+STEP_N="${4:-100}" # Default step is 100 if not provided
 
 # --- Validation ---
 if [[ ! -x "$BIN1" ]] || [[ ! -x "$BIN2" ]]; then
